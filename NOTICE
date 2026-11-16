@@ -1,2 +1,13 @@
-This is a modified version of marked 18.1.3, derived from https://github.com/markedjs/marked/tree/v18.1.3 (commit ba50aa95636ac8f97f46446bbfeb04592ed22216).
-Changes: adapted the module for standalone use, replaced list first-line splitting with indexOf/slice, and guarded inline tokenizers by their required initial characters.
+This is a modified version of marked 18.1.3 (MIT).
+Copyright (c) 2018+, MarkedJS; Copyright (c) 2011-2018, Christopher Jeffrey.
+Source: https://github.com/markedjs/marked
+Tag v18.1.3, commit ba50aa95636ac8f97f46446bbfeb04592ed22216.
+
+Changes for markdown-render-speed-02:
+- Extract list first lines with indexOf/slice instead of splitting remaining input.
+- Guard inline tokenizer calls using their required initial characters.
+- Remove email lookaheads from the inline text rule when the source has no @.
+- Emit plain inline text tokens directly when syntax and autolinks are impossible.
+- Add a deterministic competition driver reading /input and writing /output.
+
+The upstream license and original Markdown notice are preserved in LICENSE.
